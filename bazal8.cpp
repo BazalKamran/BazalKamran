@@ -1,41 +1,19 @@
 #include<iostream>
-#include<cmath>
 using namespace std;
 int main()
 {
-	string figure;
-	float area;
-	cout<<"Enter ther type of figure=";
-	cin>>figure;
-	
-	if(figure=="square")
-	{	
-	float side;
-	cout<<"Enter side of square =";
-	cin>>side;
-	area=side*side;
-}
-    if(figure=="rectangle")
-    {
-    	float length,width;
-    	cout<<"enter length and width of rectangle";
-    	cin>>length>>width;
-    	area=length*width;
-	}
-    if(figure=="circle")
-	{
-		float radius;
-		cout<<"enter radius of cirlce";
-		cin>>radius;
-		area = M_PI *radius *radius;
-	}
-    if (figure=="triangle")
-    {
-    	float base,height;
-    	cout<<"enter base and height of triangle";
-    	cin>>base>>height;
-    	area= 0.5 *base *height;
-	}
-	cout<<"area is"<<area<<endl;
+	float veg_price,fruitprice;
+	float vk,fk,totalcoins,totalRps;
+	cout<<"Enter vegetable price per kilograms:";
+	cin>>veg_price;
+	cout<<"Enter fruit price per kilograms:";
+	cin>>fruitprice;
+	cout<<"Enter total kilograms of vegetables=";
+	cin>>vk;
+	cout<<"Enter total kilograms of fruits=";
+	cin>>fk;
+	totalRps= (veg_price*vk)+(fruitprice*fk)/1.94;
+	cout<<"total Rps"<<totalRps<<endl;
 	return 0;
+	
 }

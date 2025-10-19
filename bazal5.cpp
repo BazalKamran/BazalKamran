@@ -2,22 +2,26 @@
 using namespace std;
 int main()
 {
-	int holidays;
-	cout<<"Enter number of holidays=";
-	cin>>holidays;
-	int working_days= 365-holidays;
-	int total_play= (working_days*63)+(holidays*127);
-	int difference= 30000-total_play;
-	int hours= difference/60;
-	int minutes= difference%60;
+	string name;
+	int atp,ctp,ats,cts,donation_percent;
+	cout<<"enter adult ticket price";
+	cin>>atp;
+	cout<<"enter adult ticket sold";
+	cin>>ats;
+	cout<<"enter child ticket price";
+	cin>>ctp;
+	cout<<"enter child ticket sold";
+	cin>>cts;
+	cout<<"enter percentage to be donated to charity";
+	cin>>donation_percent;
+	int totalsales;
+	totalsales=(atp*ats)+(ctp*cts);
+	double charityamount;
+	charityamount= (totalsales*donation_percent)/100.0;
+	cout<<"total sales"<<totalsales<<endl;
+	cout<<"charity amount"<<charityamount<<endl;
+
+	return 0;
 	
-	if(total_play > 30000)
-	{
-	cout<<"tom will run away"<<endl;
-	cout<<hours<<"hours"<<"and"<<minutes<<"minutes"<<"less for play";}
-	else
-	{
-		cout<<"tom sleeps well"<<endl;
-		cout<<hours<<"hours"<<"and"<<minutes<<"hours"<<"more for play";}
-		return 0;
-	}
+	
+}
